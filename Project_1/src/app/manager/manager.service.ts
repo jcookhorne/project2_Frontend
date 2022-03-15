@@ -44,27 +44,27 @@ export class ManagerService {
 
 
   approve(reimbursementId: any) {
-    return this.http.put<Requests>("http://localhost:4042/api/approve/" + reimbursementId, {});
+    return this.http.put<Requests>("http://localhost:7070/api/approve/" + reimbursementId, {});
   }
 
   deny(reimbursementId = (this.retrievePendingId())) {
     console.log(reimbursementId);
-    return this.http.put<Denied>("http://localhost:4042/api/deny/" + reimbursementId, {});
+    return this.http.put<Denied>("http://localhost:7070/api/deny/" + reimbursementId, {});
   }
 
   fetchAllResolved(request: Resolved): Observable<Resolved[]> {
-    return this.http.get<Resolved[]>("http://localhost:4042/api/employees/resolved");
+    return this.http.get<Resolved[]>("http://localhost:7070/api/employees/resolved");
   }
 
   fetchAllPending(request: Requests): Observable<Requests[]> {
-    return this.http.get<Requests[]>("http://localhost:4042/api/employees");
+    return this.http.get<Requests[]>("http://localhost:7070/api/employees");
   }
 
   fetchAllDenied(request: Denied): Observable<Denied[]> {
-    return this.http.get<Denied[]>("http://localhost:4042/api/employees/denied");
+    return this.http.get<Denied[]>("http://localhost:7070/api/employees/denied");
   }
 
   fetchEmpReimbursement(search: String): Observable<Requests[]> {
-    return this.http.get<Requests[]>("http://localhost:4042/api/employee/" + search);
+    return this.http.get<Requests[]>("http://localhost:7070/api/employee/" + search);
   }
 }

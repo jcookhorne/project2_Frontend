@@ -1,0 +1,12 @@
+.search-bar{
+    width: 200px;
+   text-align: center;
+    margin: 30px auto ;
+}
+
+body  {
+    background-color: linear-gradient(120deg, #f6d365 0%, #fda085 100%)!important;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+  }

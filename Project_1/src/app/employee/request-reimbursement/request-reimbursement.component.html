@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="card-body bg-light card-body-sm">
+
+
+    <div class="card m-5">
+      <div class="card-header bg-success text-white">Reimbursement</div>
+      <div class="card-body">
+        <form #myFormTemplate="ngForm" (ngSubmit)="reimbursement()">
+          <div class="reimAmount mb-3 mt-3">
+            <label for="Amount" class="form-label">Reimbursement Amount:</label>
+            <input type="text" class="form-control" id="Amount" placeholder="Enter Reimbursement Amount" name="Amount"
+              [(ngModel)]="reim.reimbursementAmount">
+          </div>
+          <div class="reimReason mb-3 mt-3">
+            <label for="Reason" class="form-label">Reimbursement Reason:</label>
+            <textarea class="form-control" id="reason" placeholder="Enter reason for reimbursement " name="Reason"
+              [(ngModel)]="reim.reimbursementReason"></textarea>
+          </div>
+          <div class="card-footer bg-light">
+            <button type="submit" class="btn btn-success" (click)="null">Request New Reimbursement</button>
+
+          </div>
+
+        </form>
+      </div>
+    </div>

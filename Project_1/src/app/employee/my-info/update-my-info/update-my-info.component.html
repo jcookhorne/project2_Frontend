@@ -1,0 +1,69 @@
+<div class=" container-fluid justify-content-center mx-auto">
+    <form #myFormTemplate="ngForm" (ngSubmit)="updateInfo()">
+        <div class="card-header bg-primary text-white">Update Information</div>
+        <div class="card-body bg-light card-body-lg border border-5">
+
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-1 col-form-label text-dark ">First Name: </label>
+                <input type="text" class="form-control" id="firstName" placeholder="employee First Name"
+                    name="firstName" [(ngModel)]="newEmployee.employeeFirstName">
+
+
+            </div>
+            <div class="form-group row mt-3">
+                <label for="last Name" class="col-sm-1 col-form-label text-dark ">Last Name: </label>
+                <div class="col-sm-7">
+                    <input class="form-control" type="text" id="lastName" placeholder="Enter Last name" name="lastName"
+                        [(ngModel)]="newEmployee.employeeLastName">
+                </div>
+
+            </div>
+            <div class="form-group row mt-3">
+                <label for="Email" class="col-sm-1 col-form-label text-dark ">Email: </label>
+                <div class="col-sm-7">
+                    <input class="form-control" type="text" id="Email" placeholder="Enter Last name" name="Email"
+                        [(ngModel)]="newEmployee.employeeEmail">
+                </div>
+
+            </div>
+            <div class="form-group row mt-3">
+                <label for="Address" class="col-sm-1 col-form-label text-dark ">Address: </label>
+                <div class="col-sm-7">
+                    <input class="form-control" type="text" id="Address" placeholder="Enter Address" name="Address"
+                        [(ngModel)]="newEmployee.employeeAddress">
+                </div>
+
+            </div>
+            <div class="form-group row mt-3">
+                <label for="Mobile Number" class="col-sm-1 col-form-label text-dark ">Mobile Number: </label>
+                <div class="col-sm-7">
+                    <input class="form-control" type="text" id="Mobile Number" placeholder="Enter Mobile Number"
+                        name="Mobile Number" [(ngModel)]="newEmployee.employeePhoneNumber">
+                </div>
+
+            </div>
+            <div class="form-group row mt-3">
+                <label for="userName" class="col-sm-1 col-form-label text-dark ">Username: </label>
+                <div class="col-sm-7">
+                    <input class="form-control" type="text" id="Username " placeholder="Enter Username" name="Username"
+                        [(ngModel)]="newEmployee.employeeUserName">
+                </div>
+
+            </div>
+            <div class="form-group row mt-3">
+                <label for="password" class="col-sm-1 col-form-label text-dark ">password: </label>
+                <div class="col-sm-7">
+                    <input class="form-control" type="text" id="password " placeholder="Enter password" name="password"
+                        [(ngModel)]="newEmployee.employeePassword">
+                </div>
+            </div>
+        </div>
+        <div class="card-footer bg-light">
+            <button type="submit" class="btn btn-primary" (click)="null">
+                Submit
+            </button>
+        </div>
+
+    </form>
+
+</div>

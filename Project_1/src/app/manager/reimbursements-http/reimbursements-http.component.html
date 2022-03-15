@@ -1,0 +1,31 @@
+<div class="container">
+    <h3>Pending Reimbursements</h3>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Pending ID</th>
+                <th>Employee ID</th>
+                <th>Reimbursement Amount</th>
+                <th>Reimbursement Reason</th>
+                <th>Reimbursement Status</th>
+                <th>Reimbursement Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let requests of oneRequest">
+                <td>{{ requests.pendingId }}</td>
+                <td>{{ requests.employeeId }}</td>
+                <td>{{ requests.reimbursementAmount }}</td>
+                <td>{{ requests.reimbursementReason }}</td>
+                <td>{{ requests.status }}</td>
+                <td>{{ requests.reimbursementDate }}</td>
+                <td><button type="button" class="btn btn-primary" (click)="approve(requests.pendingId)">Approve
+                    </button></td>
+
+                <td><button type="button" class="btn btn-danger" (click)="deny(requests.pendingId)">Deny
+                    </button></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

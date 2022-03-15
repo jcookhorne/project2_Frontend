@@ -1,0 +1,33 @@
+
+
+<div class="search-bar">
+  <h3>Search History</h3>
+<input type="text" class="form-control" placeholder="Employee ID" [(ngModel)]="search">
+<button type="button"  class="btn btn-primary" (click) = "fetchEmpReimbursement()">Search</button>
+</div>
+<div class="container">
+    <h3>Reimbursements History</h3>
+    <table class="table table-success table-striped">
+    <thead>
+        <tr>
+           
+            <th>Employee ID</th>
+            <th>Reimbursement Amount</th>
+            <th>Reimbursement Reason</th>
+            <th>Reimbursement Status</th>
+            <th>Reimbursement Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let requests of oneRequest">
+           
+            <td>{{ requests.employeeId }}</td>
+            <td>{{ requests.reimbursementAmount }}</td>
+            <td>{{ requests.reimbursementReason }}</td>
+            <td>{{ requests.status }}</td>
+            <td>{{ requests.reimbursementDate }}</td>
+           
+        </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,63 @@
+<form class="container-fluid justify-content-center mx-auto">
+    <div class="card-header bg-primary text-white">My Information</div>
+    <div class="card-body bg-light card-body-lg border border-5">
+        <table>
+
+
+            <tbody>
+                <tr>
+                    <td>
+                        <label class="col-sm-1 col-form-label text-dark ">First Name: </label>
+                    </td>
+                    <td>{{newEmployee.employeeFirstName }}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="col-sm-1 col-form-label text-dark ">Last Name: </label>
+                    </td>
+                    <td>{{ newEmployee.employeeLastName }}</td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label class="col-sm-1 col-form-label text-dark ">Email: </label>
+                    </td>
+                    <td>{{ newEmployee.employeeEmail }}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="col-sm-1 col-form-label text-dark ">Address: </label>
+                    </td>
+                    <td>{{ newEmployee.employeeAddress }}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="col-sm-1 col-form-label text-dark ">Mobile Number: </label>
+                    </td>
+                    <td>{{ newEmployee.employeePhoneNumber }}</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="col-sm-1 col-form-label text-dark ">Username: </label>
+                    </td>
+                    <td>{{ newEmployee.employeeUserName }}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="col-sm-1 col-form-label text-dark ">Password: </label>
+                    </td>
+                    <td>{{ newEmployee.employeePassword }}</td>
+                </tr>
+        </table>
+
+    </div>
+
+    <div class="card-footer bg-light">
+        <button type="submit" class="btn btn-primary" (click)="updateInfo()">
+            UPDATE
+        </button>
+    </div>
+
+</form>

@@ -15,6 +15,7 @@ export class ViewPendingReimbursementsComponent implements OnInit {
     reimbursementAmount: 0,
   	reimbursementReason:"",
   	reimbursementDate:"",
+    state:"",
 	  status:"",
     imgUrl:""
    }

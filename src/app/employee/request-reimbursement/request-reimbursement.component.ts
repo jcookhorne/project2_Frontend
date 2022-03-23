@@ -35,6 +35,7 @@ onUpload(){
     reimbursementAmount: 0,
     reimbursementReason: "",
     reimbursementDate: "",
+    state:"",
     status: "",
     imgUrl:""
   }

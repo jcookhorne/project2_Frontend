@@ -14,6 +14,7 @@ export class ViewResolvedReimbursementsComponent implements OnInit {
     reimbursementAmount: 0,
   	reimbursementReason:"",
   	reimbursementDate:"",
+    state:"",
 	  status:"",
     imgUrl: ""
    }

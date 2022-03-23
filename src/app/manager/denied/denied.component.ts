@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Denied } from '../denied.model';
 import { ManagerService } from '../manager.service';
+import { Requests } from '../requests.model';
 @Component({
   selector: 'app-denied',
   templateUrl: './denied.component.html',
@@ -9,8 +10,8 @@ import { ManagerService } from '../manager.service';
 export class DeniedComponent implements OnInit {
 
 
-  nope: Denied = {
-    deniedId: 0,
+  nope: Requests = {
+    reimbursementId: 0,
     employeeId: 0,
     reimbursementAmount: 0,
     reimbursementReason: "",

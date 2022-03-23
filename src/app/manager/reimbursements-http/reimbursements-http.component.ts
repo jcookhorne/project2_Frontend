@@ -13,7 +13,7 @@ import { Denied } from '../denied.model';
 export class ReimbursementsHttpComponent implements OnInit {
 
   request: Requests = {
-    pendingId: 0,
+    reimbursementId: 0,
     employeeId: 0,
     reimbursementAmount: 0,
     reimbursementReason: "",

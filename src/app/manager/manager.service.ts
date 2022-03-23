@@ -17,6 +17,7 @@ export class ManagerService {
 
   constructor(private http: HttpClient, private userService: UserService) { }
 
+
   storeManagerUser(manager: Requests): void {
     sessionStorage.setItem("reimbursementInfo", JSON.stringify(manager))
 
@@ -43,13 +44,13 @@ export class ManagerService {
 
 
 
-  approve(reimbursementId: any) {
-    return this.http.put<Requests>("http://localhost:7070/api/approve/" + reimbursementId, {});
+  approve(pendingId: number=(this.retrieveReimbursementId())) {
+    return this.http.put<Requests>("http://localhost:7070/api/approve/" + pendingId, {});
   }
 
-  deny(reimbursementId = (this.retrievePendingId())) {
-    console.log(reimbursementId);
-    return this.http.put<Denied>("http://localhost:7070/api/deny/" + reimbursementId, {});
+  deny(pendingId: number = (this.retrieveReimbursementId())) {
+    console.log(pendingId);
+    return this.http.put<Requests>("http://localhost:7070/api/deny/" + pendingId, {});
   }
 
   fetchAllResolved(request: Resolved): Observable<Resolved[]> {
@@ -60,8 +61,8 @@ export class ManagerService {
     return this.http.get<Requests[]>("http://localhost:7070/api/employees");
   }
 
-  fetchAllDenied(request: Denied): Observable<Denied[]> {
-    return this.http.get<Denied[]>("http://localhost:7070/api/employees/denied");
+  fetchAllDenied(request: Requests): Observable<Requests[]> {
+    return this.http.get<Requests[]>("http://localhost:7070/api/employees/denied");
   }
 
   fetchEmpReimbursement(search: String): Observable<Requests[]> {

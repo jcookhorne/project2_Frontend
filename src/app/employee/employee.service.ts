@@ -13,7 +13,7 @@ export class EmployeeService {
   constructor(private http: HttpClient) { }
 
   retrieveEmployeeId(): any {
-    let id = localStorage.getItem("id");
+    let id = sessionStorage.getItem("id");
 
     return id;
   }

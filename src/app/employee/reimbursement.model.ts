@@ -4,5 +4,7 @@ export interface Reimbursement{
     reimbursementAmount: number;
 	reimbursementReason:String;
 	reimbursementDate:String;
-	status:String;
+	state: String, // pending and Resolved
+	status:String; // Approved and Denied
+	imgUrl:String;
 }

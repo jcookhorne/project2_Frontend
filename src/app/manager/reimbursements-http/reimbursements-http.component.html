@@ -13,16 +13,16 @@
         </thead>
         <tbody>
             <tr *ngFor="let requests of oneRequest">
-                <td>{{ requests.pendingId }}</td>
+                <td>{{ requests.reimbursementId }}</td>
                 <td>{{ requests.employeeId }}</td>
                 <td>{{ requests.reimbursementAmount }}</td>
                 <td>{{ requests.reimbursementReason }}</td>
                 <td>{{ requests.status }}</td>
                 <td>{{ requests.reimbursementDate }}</td>
-                <td><button type="button" class="btn btn-primary" (click)="approve(requests.pendingId)">Approve
+                <td><button type="button" class="btn btn-primary" (click)="approve(requests.reimbursementId)">Approve
                     </button></td>
 
-                <td><button type="button" class="btn btn-danger" (click)="deny(requests.pendingId)">Deny
+                <td><button type="button" class="btn btn-danger" (click)="deny(requests.reimbursementId)">Deny
                     </button></td>
 
             </tr>

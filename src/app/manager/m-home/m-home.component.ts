@@ -11,7 +11,7 @@ export class MHomeComponent implements OnInit {
   search: string = "";
 
   request: Requests = {
-    pendingId: 0,
+    reimbursementId: 0,
     employeeId: 0,
     reimbursementAmount: 0,
     reimbursementReason: "",

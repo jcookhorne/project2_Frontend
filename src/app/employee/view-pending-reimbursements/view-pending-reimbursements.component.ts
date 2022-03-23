@@ -15,7 +15,8 @@ export class ViewPendingReimbursementsComponent implements OnInit {
     reimbursementAmount: 0,
   	reimbursementReason:"",
   	reimbursementDate:"",
-	  status:""
+	  status:"",
+    imgUrl:""
    }
   constructor(private employeeService:EmployeeService) { }
   allReimbursements: Reimbursement[] = [];

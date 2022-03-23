@@ -20,23 +20,23 @@ export class EmployeeService {
 
   employeeInfo(employeeId: number = (this.retrieveEmployeeId())) {
     console.log(employeeId);
-    return this.http.get<Employee>("http://localhost:7070/api/employee-Info/" + employeeId);
+    return this.http.get<Employee>("http://localhost:4444/api/employee-info/" + employeeId);
   }
   resolvedReimbursements(employeeId: number = (this.retrieveEmployeeId())): Observable<Reimbursement[]> {
-    return this.http.get<Reimbursement[]>("http://localhost:7070/api/view-resolved/" + employeeId);
+    return this.http.get<Reimbursement[]>("http://localhost:4444/api/employee-resolved/" + employeeId);
   }
 
   pendingReimbursements(employeeId: number = (this.retrieveEmployeeId())): Observable<Reimbursement[]> {
-    return this.http.get<Reimbursement[]>("http://localhost:7070/api/view-pending/" + employeeId);
+    return this.http.get<Reimbursement[]>("http://localhost:4444/api/employee-pending/" + employeeId);
   }
 
   updateInfo(employee: Employee): Observable<Employee> {
-    return this.http.put<Employee>("http://localhost:7070/api/employee-update", employee);
+    return this.http.put<Employee>("http://localhost:4444/api/employee-update", employee);
   }
 
   requestReimbursment(reimbursement: Reimbursement): Observable<Reimbursement> {
     console.log("Before Http request");
     console.log(reimbursement);
-    return this.http.post<Reimbursement>("http://localhost:7070/api/employee-request", reimbursement);
+    return this.http.post<Reimbursement>("http://localhost:4444/api/employee-request", reimbursement);
   }
 }

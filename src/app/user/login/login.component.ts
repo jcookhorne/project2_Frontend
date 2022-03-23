@@ -4,7 +4,7 @@ import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { Employee } from 'src/app/employee/employee.model';
 import { AuthService } from '../auth.service';
-import { Manager } from 'src/app/manager/manager.modue';
+import { Manager } from 'src/app/manager/manager.module';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
 
   newUser: User = {
-    userName: "",
+    username: "",
     password: "",
     role: ""
   }
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
         employeeEmail : "",
         employeeAddress : "",
         employeePhoneNumber : "",
-        employeeUserName : this.newUser.userName,
+        employeeUsername : this.newUser.username,
         employeePassword : this.newUser.password
       }
       this.userService.validateEmployee(newEmployee).subscribe((response) => {
@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
         address: "",
         contact: "",
         email: "",
-        userName: this.newUser.userName,
+        username: this.newUser.username,
         password: this.newUser.password,
       
       }

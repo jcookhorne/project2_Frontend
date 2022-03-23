@@ -7,7 +7,7 @@ export interface Manager {
     address: String,
     contact: String,
     email: String,
-    userName: String,
+    username: String,
     password: String,
   
 }

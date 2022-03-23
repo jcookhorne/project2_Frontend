@@ -18,7 +18,7 @@ export class MyInfoComponent implements OnInit {
     employeeEmail: "",
     employeeAddress: "",
     employeePhoneNumber: "",
-    employeeUserName: "",
+    employeeUsername: "",
     employeePassword: ""
   }
   constructor(private router: Router, private employeeService: EmployeeService) { }
@@ -32,7 +32,7 @@ export class MyInfoComponent implements OnInit {
       this.newEmployee.employeeEmail = response.employeeEmail;
       this.newEmployee.employeeAddress = response.employeeAddress;
       this.newEmployee.employeePhoneNumber = response.employeePhoneNumber;
-      this.newEmployee.employeeUserName = response.employeeUserName;
+      this.newEmployee.employeeUsername = response.employeeUsername;
       this.newEmployee.employeePassword = response.employeePassword;
     })
   }

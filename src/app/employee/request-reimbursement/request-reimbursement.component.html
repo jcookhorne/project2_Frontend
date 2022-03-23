@@ -18,10 +18,13 @@
           </div>
           <div class="reimimg mb-3 mt-3">
             <label for="Image" class="form-label">Reimbursement Image:</label>
-            <!-- <input type ="file" (change)="onFileSelected($event)">
-            <button type="button" (click)="onUpload()">Upload</button> -->
-            <input class="form-control" id="Image" placeholder="please upload an image for reimbursement " name="Image"
+             <input type ="file"
+              class="form-control"
+              id="Upload"
+              placeholder="please upload an image for reimbursement"
+              name="Upload"
               [(ngModel)]="reim.imgUrl">
+            
           </div>
           <div class="card-footer bg-light">
             <button type="submit" class="btn btn-success" (click)="null">Request New Reimbursement</button>

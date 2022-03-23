@@ -19,7 +19,7 @@ export class UpdateMyInfoComponent implements OnInit {
     employeeEmail : "",
     employeeAddress : "",
     employeePhoneNumber : "",
-    employeeUserName : "",
+    employeeUsername : "",
     employeePassword : ""
   }
   updateInfo(){
@@ -38,7 +38,7 @@ export class UpdateMyInfoComponent implements OnInit {
       this.newEmployee.employeeEmail = response.employeeEmail;
       this.newEmployee.employeeAddress = response.employeeAddress;
       this.newEmployee.employeePhoneNumber = response.employeePhoneNumber;
-      this.newEmployee.employeeUserName = response.employeeUserName;
+      this.newEmployee.employeeUsername = response.employeeUsername;
       this.newEmployee.employeePassword = response.employeePassword;
     })
   }

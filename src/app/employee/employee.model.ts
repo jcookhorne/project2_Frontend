@@ -5,6 +5,6 @@ export interface Employee{
     employeeEmail:String;
     employeeAddress:String;
     employeePhoneNumber:String;
-    employeeUserName:String;
+    employeeUsername:String;
     employeePassword:String;
 }

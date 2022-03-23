@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Requests } from './requests.model';
 import { Resolved } from './resolved.model';
-import { Denied } from './denied.model';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../user/user.service';
-import { Manager } from './manager.modue';
 import { Observable } from 'rxjs';
+
 
 
 @Injectable({
@@ -45,27 +44,27 @@ export class ManagerService {
 
 
   approve(pendingId: number=(this.retrieveReimbursementId())) {
-    return this.http.put<Requests>("http://localhost:7070/api/approve/" + pendingId, {});
+    return this.http.put<Requests>("http://localhost:4444/api/manager-approve/" + pendingId, {});
   }
 
   deny(pendingId: number = (this.retrieveReimbursementId())) {
     console.log(pendingId);
-    return this.http.put<Requests>("http://localhost:7070/api/deny/" + pendingId, {});
+    return this.http.put<Requests>("http://localhost:4444/api/manager-denied/" + pendingId, {});
   }
 
   fetchAllResolved(request: Resolved): Observable<Resolved[]> {
-    return this.http.get<Resolved[]>("http://localhost:7070/api/employees/resolved");
+    return this.http.get<Resolved[]>("http://localhost:4444/api/manager-approved");
   }
 
   fetchAllPending(request: Requests): Observable<Requests[]> {
-    return this.http.get<Requests[]>("http://localhost:7070/api/employees");
+    return this.http.get<Requests[]>("http://localhost:4444/api/manager-pending");
   }
 
   fetchAllDenied(request: Requests): Observable<Requests[]> {
-    return this.http.get<Requests[]>("http://localhost:7070/api/employees/denied");
+    return this.http.get<Requests[]>("http://localhost:4444/api/manager-all-denied");
   }
 
   fetchEmpReimbursement(search: String): Observable<Requests[]> {
-    return this.http.get<Requests[]>("http://localhost:7070/api/employee/" + search);
+    return this.http.get<Requests[]>("http://localhost:4444/api/manager-emp-reimbursement/" + search);
   }
 }

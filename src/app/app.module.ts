@@ -19,6 +19,7 @@ import { UpdateMyInfoComponent } from './employee/my-info/update-my-info/update-
 import { ReimbursementsHttpComponent } from './manager/reimbursements-http/reimbursements-http.component';
 import { ResolvedComponent } from './manager/resolved/resolved.component';
 import { DeniedComponent } from './manager/denied/denied.component';
+import { UploadPicComponent } from './employee/upload-pic/upload-pic.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { DeniedComponent } from './manager/denied/denied.component';
     ReimbursementsHttpComponent,
     ResolvedComponent,
     DeniedComponent,
+    UploadPicComponent,
 
   ],
   imports: [

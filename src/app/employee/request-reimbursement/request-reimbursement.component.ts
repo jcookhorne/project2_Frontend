@@ -25,13 +25,25 @@ export class RequestReimbursementComponent implements OnInit {
     status: ""
   }
 
+  
+
+  selectedFile: File = null; 
+  onFileSelected(event){
+    this.selectedFile = <File> event.target.files[0];
+  }
+
+  onUpload(){
+    const fd = new FormData();
+    fd.append('image', this.selectedFile, this.selectedFile.name)
+  }
+
   ngOnInit(): void {
 
 
   }
 
   reimbursement() {
-    this.employeeService.requestReimbursment(this.reim).subscribe((response) => {
+    this.employeeService.requestReimbursment(this.reim).subscribe((response: any) => {
       this.router.navigate(['home']);
     })
   }

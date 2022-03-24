@@ -5,6 +5,7 @@ export interface Requests {
     reimbursementReason: String,
     reimbursementDate: String,
     status: String,
+    imageUrl: String,
 
 
 }

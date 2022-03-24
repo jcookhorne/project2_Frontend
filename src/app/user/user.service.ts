@@ -19,13 +19,13 @@ export class UserService {
   validateManager(user: Manager) {
     console.log("user data:");
     console.log(user);
-    return this.http.post<Manager>("http://localhost:7070/api/manager-login", user);
+    return this.http.post<Manager>("http://localhost:4042/api/manager-login", user);
 
   }
   validateEmployee(user: Employee) {
     console.log("user data:");
     console.log(user);
-    return this.http.post<Employee>("http://localhost:7070/api/employee-login", user);
+    return this.http.post<Employee>("http://localhost:4042/api/employee-login", user);
 
   }
 

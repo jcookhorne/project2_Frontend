@@ -6,5 +6,4 @@ export interface Reimbursement{
 	reimbursementDate:String;
 	state: String, // pending and Resolved
 	status:String; // Approved and Denied
-	imgUrl:String;
 }

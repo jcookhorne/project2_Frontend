@@ -18,6 +18,7 @@ import { ReimbursementsHttpComponent } from './manager/reimbursements-http/reimb
 import { ResolvedComponent } from './manager/resolved/resolved.component';
 import { DeniedComponent } from './manager/denied/denied.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,11 +32,10 @@ import { DeniedComponent } from './manager/denied/denied.component';
     ViewPendingReimbursementsComponent,
     ViewResolvedReimbursementsComponent,
     UpdateMyInfoComponent,
-
-
     ReimbursementsHttpComponent,
     ResolvedComponent,
     DeniedComponent,
+
 
   ],
   imports: [

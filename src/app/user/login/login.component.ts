@@ -79,7 +79,7 @@ export class LoginComponent implements OnInit {
            
             this.errorMessage = "Invalid Username";
   
-          }else if(response.pasword =="") {
+          }else if(response.password =="") {
             this.errorMessagePassword = "Invalid Password"
           }else{
 

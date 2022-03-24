@@ -13,4 +13,11 @@ describe('ManagerService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it('should return id ', () => {
+    let hedf= 1;
+    expect(service.approve(hedf)).toBeTruthy;
+
+  })
+
 });
+

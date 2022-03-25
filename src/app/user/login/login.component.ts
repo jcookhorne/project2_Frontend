@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         employeeLastName : "",
         employeeEmail : "",
         employeeAddress : "",
-        employeePhoneNumber : "",
+        employeeContact : "",
         employeeUsername : this.newUser.username,
         employeePassword : this.newUser.password
       }

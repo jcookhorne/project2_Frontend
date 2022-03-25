@@ -16,11 +16,7 @@ export class MHomeComponent implements OnInit {
     reimbursementAmount: 0,
     reimbursementReason: "",
     status: "",
-<<<<<<< Updated upstream
     reimbursementDate: ""
-=======
-    reimbursementDate: "",
->>>>>>> Stashed changes
   };
 
 

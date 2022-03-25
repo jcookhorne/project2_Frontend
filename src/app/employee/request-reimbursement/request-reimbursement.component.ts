@@ -31,8 +31,6 @@ export class RequestReimbursementComponent implements OnInit {
     
   }
 
-<<<<<<< Updated upstream
-=======
   // selectedFile: File = null; 
   // onFileSelected(event){
   //   this.selectedFile = <File> event.target.files[0];
@@ -43,7 +41,6 @@ export class RequestReimbursementComponent implements OnInit {
   //   fd.append('image', this.selectedFile, this.selectedFile.name)
   // }
 
->>>>>>> Stashed changes
   ngOnInit(): void {
 
 

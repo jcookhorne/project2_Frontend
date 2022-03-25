@@ -4,7 +4,7 @@ export interface Employee{
     employeeLastName:String;
     employeeEmail:String;
     employeeAddress:String;
-    employeePhoneNumber:String;
+    employeeContact:String;
     employeeUsername:String;
     employeePassword:String;
 }

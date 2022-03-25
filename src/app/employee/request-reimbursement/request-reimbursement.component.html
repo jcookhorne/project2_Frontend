@@ -1,7 +1,7 @@
+
 <div class="container-fluid">
   <div class="card-body bg-light card-body-sm">
-
-
+    <form>
     <div class="card m-5">
       <div class="card-header bg-success text-white">Reimbursement</div>
       <div class="card-body">
@@ -18,20 +18,39 @@
           </div>
           <div class="reimimg mb-3 mt-3">
             <label for="Image" class="form-label">Reimbursement Image:</label>
-             <input type ="file"
-              class="form-control"
-              id="Upload"
-              placeholder="please upload an image for reimbursement"
-              name="Upload"
-              >
-            
+            <div class="row">
+              <div class="col-8">
+                <label class="btn btn-default p-0">
+                  <input type="file" (change)="selectFile($event)" />
+                </label>
+              </div>
+              <div class="col-4">
+                <button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()">
+                  Upload
+                </button>
+              </div>
+            </div>
+              <div *ngIf="currentFile" class="progress my-3">
+                <div
+                  class="progress-bar progress-bar-info progress-bar-striped"
+                  role="progressbar"
+                  attr.aria-valuenow="{{ progress }}"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  [ngStyle]="{ width: progress + '%' }"
+                >
+                  {{ progress }}%
+                </div>
+               
           </div>
+         
+          </div>
+        
           <div class="card-footer bg-light">
-            <button type="submit" class="btn btn-success" (click)="null">Request New Reimbursement</button>
+            <button type="submit" class="btn btn-success" (click)="reimbursement">Request New Reimbursement</button>
 
           </div>
 
         </form>
-
       </div>
     </div>

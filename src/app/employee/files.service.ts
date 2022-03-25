@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FilesService {
-    private baseUrl = 'http://localhost:4444';
+    private baseUrl = 'http://localhost:4444/api';
     constructor(private http: HttpClient) { }
     upload(file: File): Observable<HttpEvent<any>> {
       const formData: FormData = new FormData();
@@ -22,4 +22,3 @@ export class FilesService {
     }
   }
 
-}

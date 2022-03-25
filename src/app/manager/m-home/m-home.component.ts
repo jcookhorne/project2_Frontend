@@ -17,7 +17,6 @@ export class MHomeComponent implements OnInit {
     reimbursementReason: "",
     status: "",
     reimbursementDate: "",
-    imageUrl: ""
   };
 
 

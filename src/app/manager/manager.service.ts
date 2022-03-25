@@ -22,7 +22,7 @@ export class ManagerService {
 
   }
 
-  retrieveReimbursementId() {
+   retrieveReimbursementId() {
     let Id: number = JSON.parse(sessionStorage.getItem('reimbursementId') || '{}');
     console.log("retrieve employee log");
     console.log(Id);
@@ -33,7 +33,7 @@ export class ManagerService {
     sessionStorage.setItem("reimbursementInfo", JSON.stringify(manager))
 
   }
-  retrievePendingId() {
+ retrievePendingId() {
     let Id: number = JSON.parse(sessionStorage.getItem('pendingId') || '{}');
     console.log("retrieve pending");
     console.log(Id);

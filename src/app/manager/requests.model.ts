@@ -5,6 +5,4 @@ export interface Requests {
     reimbursementReason: String,
     reimbursementDate: String,
     status: String,
-    
-
 }

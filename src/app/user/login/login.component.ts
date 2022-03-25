@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         employeeLastName : "",
         employeeEmail : "",
         employeeAddress : "",
-        employeePhoneNumber : "",
+        employeeContact : "",
         employeeUsername : this.newUser.username,
         employeePassword : this.newUser.password
       }
@@ -42,10 +42,14 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('user', JSON.stringify(response));
         sessionStorage.setItem("id", JSON.stringify(response.employeeId))
 
-        if (response.employeeFirstName == "") {
+        if (response.employeeUsername == "") {
           //login failed
        
-          this.errorMessage = "Invalid Credentials";
+          this.errorMessage = "Add Valid User";
+        }  else if (response.employeePassword == "") {
+          //login failed
+       
+          this.errorMessage = "Incorrect Password";
         } else {
           //login success
           this.authService.loggedIn = true;
@@ -70,12 +74,12 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('user', JSON.stringify(response));
           localStorage.setItem("id", JSON.stringify(response.managerId))
           
-          if (response.firstName == "") {
+          if (response.username == "") {
             //login failed
            
             this.errorMessage = "Invalid Username";
   
-          }else if(response.address =="") {
+          }else if(response.password =="") {
             this.errorMessagePassword = "Invalid Password"
           }else{
 
@@ -83,6 +87,7 @@ export class LoginComponent implements OnInit {
           this.authService.loggedIn = true;
           this.authService.managerRole = true;
           this.router.navigate(['mhome'])
+          console.log(response);
         }}
 
       

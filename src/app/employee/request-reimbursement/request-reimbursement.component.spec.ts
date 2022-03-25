@@ -22,10 +22,10 @@ describe('RequestReimbursementComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should request a reimbursement', ()=>{
+  // it('should request a reimbursement', ()=>{
 
-    const compiled  = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.reimAmount')?.textContent).toContain(Number);
-    expect(compiled.querySelector('.reimReason')?.textContent).toContain(String);
-  });
+  //   const compiled  = fixture.nativeElement as HTMLElement;
+  //   expect(compiled.querySelector('.reimAmount')?.textContent).toContain(Number);
+  //   expect(compiled.querySelector('.reimReason')?.textContent).toContain(String);
+  // });
 });

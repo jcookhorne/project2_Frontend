@@ -9,8 +9,16 @@ describe('ManagerService', () => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(ManagerService);
   });
-
+//dsfdsaghf
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it('should return id ', () => {
+    let hedf= 1;
+    service.approve(hedf)
+    expect(service.approve(hedf)).toBeTruthy;
+
+  })
+
 });
+

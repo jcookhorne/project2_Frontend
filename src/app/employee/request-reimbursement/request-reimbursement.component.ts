@@ -14,15 +14,6 @@ export class RequestReimbursementComponent implements OnInit {
   constructor(private employeeService: EmployeeService, private router: Router, private http:HttpClient ){ }
 
   selectedFile = null;
-onFileSelected(event: { target: { files: null[]; }; }){
-  this.selectedFile = event.target.files[0];
-}
-onUpload(){
-
-}
-
-
-
 
   retrieveEmployeeId(): any {
     let id = localStorage.getItem("id");
@@ -36,21 +27,11 @@ onUpload(){
     reimbursementReason: "",
     reimbursementDate: "",
     state:"",
-    status: "",
-    imgUrl:""
+    status: ""
+    
   }
 
-  
 
-  selectedFile: File = null; 
-  onFileSelected(event){
-    this.selectedFile = <File> event.target.files[0];
-  }
-
-  onUpload(){
-    const fd = new FormData();
-    fd.append('image', this.selectedFile, this.selectedFile.name)
-  }
 
   ngOnInit(): void {
 

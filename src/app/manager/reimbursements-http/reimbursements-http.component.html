@@ -9,6 +9,7 @@
                 <th>Reimbursement Reason</th>
                 <th>Reimbursement Status</th>
                 <th>Reimbursement Date</th>
+                <th>Receipt</th>
             </tr>
         </thead>
         <tbody>
@@ -19,7 +20,8 @@
                 <td>{{ requests.reimbursementReason }}</td>
                 <td>{{ requests.status }}</td>
                 <td>{{ requests.reimbursementDate }}</td>
-                <td><button type="button" class="btn btn-primary" (click)="approve(requests.reimbursementId)">Approve
+                <td> <img [src]= "requests.imageUrl" width="150px" height="100"></td>
+                <td><button type="button" class="btn btn-primary" (click)="approve(requests.pendingId)">Approve
                     </button></td>
 
                 <td><button type="button" class="btn btn-danger" (click)="deny(requests.reimbursementId)">Deny

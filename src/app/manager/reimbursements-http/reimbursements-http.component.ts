@@ -18,7 +18,8 @@ export class ReimbursementsHttpComponent implements OnInit {
     reimbursementAmount: 0,
     reimbursementReason: "",
     status: "",
-    reimbursementDate: ""
+    reimbursementDate: "",
+    imageUrl: ""
   };
 
 

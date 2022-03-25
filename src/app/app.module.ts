@@ -37,6 +37,7 @@ import { MyInfoComponent } from './employee/my-info/my-info.component';
     DeniedComponent,
 
 
+
   ],
   imports: [
     BrowserModule,

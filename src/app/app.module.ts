@@ -9,7 +9,6 @@ import { LoginComponent } from './user/login/login.component';
 import { LogoutComponent } from './user/logout/logout.component';
 import { MHomeComponent } from './manager/m-home/m-home.component';
 import { HomeComponent } from './employee/home/home.component';
-import { MyInfoComponent } from './employee/my-info/my-info.component';
 import { RequestReimbursementComponent } from './employee/request-reimbursement/request-reimbursement.component';
 import { ViewPendingReimbursementsComponent } from './employee/view-pending-reimbursements/view-pending-reimbursements.component';
 import { ViewResolvedReimbursementsComponent } from './employee/view-resolved-reimbursements/view-resolved-reimbursements.component';
@@ -17,6 +16,7 @@ import { UpdateMyInfoComponent } from './employee/my-info/update-my-info/update-
 import { ReimbursementsHttpComponent } from './manager/reimbursements-http/reimbursements-http.component';
 import { ResolvedComponent } from './manager/resolved/resolved.component';
 import { DeniedComponent } from './manager/denied/denied.component';
+import { MyInfoComponent } from './employee/my-info/my-info.component';
 
 
 @NgModule({
